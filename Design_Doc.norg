@@ -1,0 +1,20 @@
+* dock-watch
+** Problem Statement
+   Currently I have a script that updates all docker containers on a set interval. This is annoying as I would have all containers all go down at the same time creating this long downtime. I want to be able to watch for image changes and update on those changes rather than stopping and updating all containers. I want to make something similar to watchtower but with more features and easier to use. I also want to reduce downtime by implementing a transfer of control between the old and new container
+
+** Functional Requirements
+   - Watches containers and updates on new updates on images
+
+** Optional Requirements
+   - Set and use labels to configure what happens with each container
+   - Notify on updates
+   - Avoid downtime by spinning up new image in new container and then transfering control
+
+* TODO
+  - (x) Create a design doc
+  - (x) Query and display running containers
+  - (x) Create vm for testing
+  - ( ) Parse container info for hash and tag
+  - ( ) Check for new image builds
+  - ( ) Update containers and ensure safe transitions to new container
+  - ( ) Check labels for what to do with the container
